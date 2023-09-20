@@ -1,44 +1,62 @@
-<!-- views/crypto.ejs -->
+<!DOCTYPE html>
+<html lang="en">
 
-<h1>Cryptocurrency Details</h1>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trading View</title>
+</head>
+
+<body>
+
+  <h1>Cryptocurrency Details</h1>
 
 
-<!-- Dropdown menu for selecting cryptocurrencies -->
-<select id="crypto-dropdown">
-  <% cryptocurrencies.forEach(function(crypto) { %>
-    <option value="<%= crypto.name %>"><%= crypto.name %></option>
-  <% }); %>
-</select>
-<section class="coin-price">
-  <p>Best Price to Trade</p>
-  <div class="best-trade-price">
-    <!-- Best trade price will be displayed here -->
+  <!-- Dropdown menu for selecting cryptocurrencies -->
+  <select id="crypto-dropdown">
+    <% cryptocurrencies.forEach(function(crypto) { %>
+      <option value="<%= crypto.name %>">
+        <%= crypto.name %>
+      </option>
+      <% }); %>
+  </select>
+  <section class="coin-price">
+    <p>Best Price to Trade</p>
+    <div class="best-trade-price">
+      <!-- Best trade price will be displayed here -->
+    </div>
+  </section>
+
+  <section>
+    <table>
+      <thead>
+        <td>#</td>
+        <td>Platform</td>
+        <td>Last traded Price</td>
+        <td>buy and sell price</td>
+        <td>Difference </td>
+        <td>saving </td>
+      </thead>
+      <tbody id="crypto-table-body">
+        <!-- Cryptocurrency data rows will be added here dynamically -->
+      </tbody>
+    </table>
+  </section>
+
+
+  <!-- Container for displaying cryptocurrency details -->
+  <div id="crypto-details-container">
+    <!-- Content will be updated based on user selection -->
   </div>
-</section>
+  <script>
+    const cryptocurrenciesData = JSON.parse('<%- JSON.stringify(cryptocurrencies) %>');
+  </script>
+  <!-- Include JavaScript code for handling user interaction -->
+  <script src="/js/crypto.js"></script>
 
-<section>
-  <table>
-    <thead>
-      <td>#</td>
-      <td>Platform</td>
-      <td>Last traded Price</td>
-      <td>buy and sell price</td>
-      <td>Difference </td>
-      <td>saving </td>
-    </thead> 
-    <tbody id="crypto-table-body">
-      <!-- Cryptocurrency data rows will be added here dynamically -->
-    </tbody>
-  </table>
-</section>
+</body>
+
+</html>
 
 
-<!-- Container for displaying cryptocurrency details -->
-<div id="crypto-details-container">
-  <!-- Content will be updated based on user selection -->
-</div>
-<script>
-  const cryptocurrenciesData = JSON.parse('<%- JSON.stringify(cryptocurrencies) %>');
-</script>
-<!-- Include JavaScript code for handling user interaction -->
-<script src="/js/crypto.js"></script>
+<!-- views/crypto.ejs -->
