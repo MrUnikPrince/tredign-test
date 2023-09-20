@@ -52,7 +52,6 @@ exports.getCryptoDetails = async (req, res) => {
     try {
       // Fetch cryptocurrency data by symbol from MongoDB
       const crypto = await Crypto.findOne({ name: symbol });
-      console.log(crypto);
       if (crypto) {
         // Respond with JSON data for the selected cryptocurrency
         res.json({
@@ -60,8 +59,9 @@ exports.getCryptoDetails = async (req, res) => {
           last: crypto.last,
           buy: crypto.buy,
           sell: crypto.sell,
-          buy: crypto.volume
+          volume: crypto.volume // Use the correct property name here
         });
+        
       } else {
         // If the cryptocurrency is not found, respond with a 404 status
         res.status(404).json({ error: 'Cryptocurrency not found.' });
