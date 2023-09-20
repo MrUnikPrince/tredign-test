@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Trading View</title>
   <style>
-    *{
+    * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -14,33 +14,36 @@
       color: white;
 
     }
-    .main{
+
+    .main {
       width: 100%;
       background-color: rgb(21, 19, 19);
     }
-    .main nav{
-      /* -webkit-column-count: 3; */
+
+    /* Navigation Style */
+    .main nav {
       column-count: 3;
       margin: 3%;
       width: 90%;
     }
+
     .logo img {
       width: 70%;
       height: auto;
     }
-    .coins{
-      
-    }
+
     .social-links a {
       margin: 0 5px;
     }
-    .telegram-btn{
+
+    .telegram-btn {
       text-decoration: none;
       background-color: rgb(17, 218, 151);
       padding: 5px;
       border-radius: 8px;
     }
-    .primary-btn{
+
+    .primary-btn {
       outline: none;
       border: none;
       background-color: rgba(44, 37, 37, 0.784);
@@ -49,10 +52,38 @@
       border-radius: 5px;
       cursor: pointer;
     }
-    #crypto-dropdown  option{
+
+    #crypto-dropdown option {
       background-color: white;
       color: black;
     }
+
+    /* nagigation style done */
+
+    /* Price Details Container */
+    .price-details {
+      /* color: gray; */
+      text-align: center;
+      text-transform: capitalize;
+    }
+    .price-details p{
+      color: gray;
+    }
+    .price{
+      column-count: 5;
+      margin-top: 10px;
+    }
+    .return  p:nth-child(1){
+      color: rgb(17, 218, 151);      
+    }
+    .return p:nth-child(2) {
+      margin-top: 2px;
+      color: gray;
+    }
+    .best-price p:nth-child(1){
+      font-size: 25px;
+    }
+    /* Price details section added */
   </style>
 </head>
 
@@ -83,18 +114,34 @@
 
       </div>
     </nav>
+
+    <section class="price-details">
+      <p> Best Price to Trade</p>
+      <div class="price">
+        <div class="5-mins return">
+          <p>0.66%</p>
+          <p>5 Mins</p>
+        </div>
+        <div class="5-mins return">
+          <p>0.66%</p>
+          <p>5 Mins</p>
+        </div>
+        <div class="best-price">
+          <p>24,49,618</p>
+          <p>------------</p>
+        </div>
+        <div class="5-mins return">
+          <p>0.66%</p>
+          <p>5 Mins</p>
+        </div>
+        <div class="5-mins return">
+          <p>0.66%</p>
+          <p>5 Mins</p>
+        </div>
+      </div>
+      <p> Avarage Price in INR</p>
+    </section>
   </div>
-  <h1>Cryptocurrency Details</h1>
-
-
-  <!-- Dropdown menu for selecting cryptocurrencies -->
-  <select id="crypto-dropdown">
-    <% cryptocurrencies.forEach(function(crypto) { %>
-      <option value="<%= crypto.name %>">
-        <%= crypto.name %>
-      </option>
-      <% }); %>
-  </select>
   <section class="coin-price">
     <p>Best Price to Trade</p>
     <div class="best-trade-price">
