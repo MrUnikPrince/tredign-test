@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgb(12, 12, 12);
+  color: white;
+
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+}
+
+/* Navigation Style */
+.main nav {
+  column-count: 3;
+  margin: 3%;
+  width: 90%;
+}
+
+.logo img {
+  width: 50%;
+  height: auto;
+}
+#crypto-dropdown{
+  margin-left: 13 0px;
+}
+.social-links{
+  margin-left: 200px;
+}
+.social-links a {
+  margin-left: 10px;
+}
+
+.telegram-btn {
+  text-decoration: none;
+  background-color: rgb(17, 218, 151);
+  padding: 5px;
+  border-radius: 8px;
+}
+
+.primary-btn {
+  outline: none;
+  border: none;
+  background-color: rgba(44, 37, 37, 0.784);
+  font-size: medium;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#crypto-dropdown option {
+  background-color: white;
+  color: black;
+}
+
+/* nagigation style done */
+
+/* Price Details Container */
+.price-details {
+  /* color: gray; */
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.price-details p {
+  color: gray;
+}
+
+.price {
+  column-count: 5;
+  margin-top: 10px;
+}
+
+.return p:nth-child(1) {
+  color: rgb(17, 218, 151);
+}
+
+.return p:nth-child(2) {
+  margin-top: 2px;
+  color: gray;
+}
+
+.best-price p:nth-child(1) {
+  font-size: 25px;
+  color: white;
+}
+
+/* Price details section added */
+/* Plateform details */
+#plateforms {
+  margin-top: 5%;
+}
+
+.heading {
+  margin-top: 2%;
+  text-align: center;
+  column-count: 6;
+}
+.data{
+  font-weight: bold;
+  font-size: 20px;
+}
+
+footer{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
