@@ -28,12 +28,17 @@
     }
 
     .logo img {
-      width: 70%;
+      width: 50%;
       height: auto;
     }
-
+    #crypto-dropdown{
+      margin-left: 13 0px;
+    }
+    .social-links{
+      margin-left: 200px;
+    }
     .social-links a {
-      margin: 0 5px;
+      margin-left: 10px;
     }
 
     .telegram-btn {
@@ -66,24 +71,40 @@
       text-align: center;
       text-transform: capitalize;
     }
-    .price-details p{
+
+    .price-details p {
       color: gray;
     }
-    .price{
+
+    .price {
       column-count: 5;
       margin-top: 10px;
     }
-    .return  p:nth-child(1){
-      color: rgb(17, 218, 151);      
+
+    .return p:nth-child(1) {
+      color: rgb(17, 218, 151);
     }
+
     .return p:nth-child(2) {
       margin-top: 2px;
       color: gray;
     }
-    .best-price p:nth-child(1){
+
+    .best-price p:nth-child(1) {
       font-size: 25px;
     }
+
     /* Price details section added */
+    /* Plateform details */
+    #plateforms {
+      margin-top: 10px;
+    }
+
+    .heading {
+      margin-top: 5px;
+      text-align: center;
+      column-count: 6;
+    }
   </style>
 </head>
 
@@ -108,9 +129,9 @@
       </div>
 
       <div class="social-links">
-        <a href="#">O</a>
+        <a href="#">timer</a>
         <a href="#" class="telegram-btn">Connect Telegram</a>
-        <a href="#">O</a>
+        <a href="#">Day</a>
 
       </div>
     </nav>
@@ -141,13 +162,39 @@
       </div>
       <p> Avarage Price in INR</p>
     </section>
+
+    <section id="plateforms">
+      <div class="heading">
+        <p>#</p>
+        <p>Platform </p>
+        <p> Last Traded Price</p>
+        <p> Buy / Sell Price</p>
+        <p> Difference</p>
+        <p> Savings</p>
+      </div>
+      <div class="data heading">
+        <p>1</p>
+        <p>WazirS</p>
+        <p>23,22,286</p>
+        <p>23,22,286 / 23,30,651</p>
+        <p>-5.20%</p>
+        <p>-5.20%</p>
+      </div>
+      <div class="data heading">
+        <p>2</p>
+        <p>WazirS</p>
+        <p>23,22,286</p>
+        <p>23,22,286 / 23,30,651</p>
+        <p>-5.20%</p>
+        <p>-5.20%</p>
+      </div>
+    </section>
+
+    <footer>
+      <p> Copyright 2019 Hodlinfo.com</p>
+      <p> Support</p>
+    </footer>
   </div>
-  <section class="coin-price">
-    <p>Best Price to Trade</p>
-    <div class="best-trade-price">
-      <!-- Best trade price will be displayed here -->
-    </div>
-  </section>
 
   <section>
     <table>
